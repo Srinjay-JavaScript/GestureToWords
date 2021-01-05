@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Gesture To Words</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div id="boxes" class="container">
+    <center>
+    <h1 class="btn btn-info" style="border-color: black; border-width: 5px;"><b style="font-size: 23px; font-family: 'Montserrat', sans-serif;" >GESTURE TO WORDS APP</b>
+      <br>
+      <span class="emoji">&#128070;</span>
+      <span class="emoji">&#128071;</span>
+      <span class="emoji">&#128072;</span>
+      <span class="emoji">&#128073;</span>
+      <span class="emoji">&#128075;</span>
+      <span class="emoji">&#128076;</span>
+    </h1>
+
+    <br><br>
+
+    <div id="leftBox">
+        <label  class="btn btn-info" style="margin-bottom: 10px; border: 5px solid black; color: black;  font-size: 20px;">LIVE WEBCAM</label>
+        <div style="border-radius: 20px; border-color: black; border-width: 5px;" class="btn btn-info">
+        <div id="result"></div>
+        <br>
+      <button onclick="take_snap()" class="buttonHover" style=" height: 50px; color: black; background-color: orange; border-radius: 25px; border-width: 5px; border-color: black; font-weight: bolder; font-size: 20px; margin-bottom: 15px;">Take Photo</button></div>
+    </div>
+
+    <div id="rightBox" style="margin-left: 15px;">
+      <label  class="btn btn-info" style="margin-bottom: 10px; border: 5px solid black; color: black;  font-size: 20px;">PHOTO TAKEN</label>
+        <div style="border-color: black; border-width: 5px; border-radius: 20px; " class="btn btn-info">
+        <div style='width:350px;' id="photo"></div>
+        <br>
+      <button style="height: 50px; color: black; background-color: orange; border-radius: 25px; font-size: 20px; border-width: 5px; border-color: black; font-weight: bolder; margin-bottom: 15px;" onclick="change()">Change to Words</button></div>
+    </div>
+
+    <label style="color: black; font-size: 20px;"></label>Take a selfie of a gesture to know about it's meaning.
+    <div id="middleBox" style="margin-left: 15px; margin-top: 10px;">
+        <div style="border-color: black; border-width: 5px; border-radius: 20px; " class="btn btn-info">
+        <div  style='width:350px;'>
+          <label style="color: black; font-size: 20px;">PREDICTION 1: </label>
+          <hr>
+          <span style="font-size: 50px;" id="emoji1"></span><span id="word1" style="font-size: 30px;">
+
+          </span>
+          <hr>
+          <hr>
+          <hr>
+          <label style="color: black; font-size: 20px;">PREDICTION 2: </label>
+          <hr>
+          <span style="font-size: 50px;" id="emoji2"></span><span id="word2" style="font-size: 30px;">
+            
+        </div>
+        <br>
+    </div>
+    <br><br>
+
+     
+    </center>
+  
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 

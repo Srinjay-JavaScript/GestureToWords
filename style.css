@@ -1,0 +1,42 @@
+.emoji {
+  font-size: 30px;
+}
+#result,
+#photo {
+  margin-top: 25px;
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  background-color: black;
+  border: 5px white solid;
+}
+body {
+  background: linear-gradient(rgb(250, 180, 49), rgb(253, 167, 6));
+}
+
+.divs {
+  display: flex;
+}
+
+#leftbox {
+  float: left;
+  width: 33%;
+  height: 280px;
+}
+#middlebox {
+  float: center;
+  width: 33%;
+  height: 280px;
+}
+#rightbox {
+  float: right;
+  width: 33%;
+  height: 280px;
+}
+.container {
+  width: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
